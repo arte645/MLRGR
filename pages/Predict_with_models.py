@@ -58,18 +58,18 @@ button_clicked = st.button("Предсказать")
 if button_clicked:
     st.header("1 - мошенничество")
     st.header("0 - всё ок")
-    with open('..\pythonProject3/venv/models/KNN.pickle', 'rb') as file:
+    with open('..\models/KNN.pickle', 'rb') as file:
         knn_model = pickle.load(file)
-    with open('..\pythonProject3/venv/models/Bagging.pickle', 'rb') as file:
+    with open('..\models/Bagging.pickle', 'rb') as file:
         bagging_model = pickle.load(file)
-    with open('..\pythonProject3/venv/models/Gradient.pickle', 'rb') as file:
+    with open('..\models/Gradient.pickle', 'rb') as file:
         gradient_model = pickle.load(file)
-    with open('..\pythonProject3/venv/models/KMeans.pickle', 'rb') as file:
+    with open('..\models/KMeans.pickle', 'rb') as file:
         kmeans_model = pickle.load(file)
     from tensorflow.keras.models import load_model
-    nn_model = load_model('..\pythonProject3/venv/models/nn/nn.h5')
+    nn_model = load_model('..\models/nn/nn.h5')
 
-    with open('..\pythonProject3/venv/models/Stacking.pickle', 'rb') as file:
+    with open('..\models/Stacking.pickle', 'rb') as file:
         stacking_model = pickle.load(file)
 
     st.header("KNN говорит:")

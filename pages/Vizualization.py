@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 
-df = pd.read_csv('..\pythonProject3/venv/data/card_transdata.csv')
+df = pd.read_csv('..\data/card_transdata.csv')
 
 st.title("Датасет card_transdata")
 
